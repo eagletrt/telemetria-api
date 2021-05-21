@@ -9,6 +9,7 @@ FROM base as dev
 ARG MODE
 ENV NODE_ENV=$MODE
 RUN npm install
+RUN cat package.json
 RUN npm run transpile
 
 EXPOSE 3001
